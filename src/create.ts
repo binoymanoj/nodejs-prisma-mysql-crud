@@ -16,6 +16,12 @@ async function main() {
     const userData = [{ name: 'David', age: 21, email: 'bhuijns@gmail.com', phone: '8732899872' }];
     const res = await prisma.user_details.createMany({
       data: userData,
+      // data: {
+      //   name: "binoy",
+      //   age: 20,
+      //   email: "bsdfljn@gmail.com",
+      //   phone: "7654332345"
+      // },
       skipDuplicates: true,
     });
 
